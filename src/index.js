@@ -1,4 +1,9 @@
 module.exports = function solveEquation(equation) {
+    function compareNumeric(a, b) {
+        if (a > b) return 1;
+        if (a < b) return -1;
+    }
+
     let SymbolArray = equation.split(' ');
     let a = Number(SymbolArray[0]);
     let b = 0;
@@ -27,6 +32,6 @@ module.exports = function solveEquation(equation) {
         FinishArray.push(Math.round(x1));
 
     }
-    return FinishArray;
+    return FinishArray.sort(compareNumeric);
 
 };
