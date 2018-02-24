@@ -23,8 +23,8 @@ module.exports = function solveEquation(equation) {
     if (D > 0) {
         x1 = (-b + Math.sqrt(D)) / (2 * a);
         x2 = (-b - Math.sqrt(D)) / (2 * a);
-        FinishArray.push(Math.round(x1));
         FinishArray.push(Math.round(x2));
+        FinishArray.push(Math.round(x1));
 
     }
     return FinishArray;
